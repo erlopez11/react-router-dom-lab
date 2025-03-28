@@ -3,15 +3,20 @@ import { Route, Routes } from 'react-router';
 import MailboxList from './components/MailBoxList/MailboxList';
 import MailboxForm from './components/MailboxForm/MailboxForm';
 import MailboxDetails from './components/MailboxDetails/MailboxDetails';
+import NavBar from './components/NavBar/NavBar';
 import './App.css'
-import { Route } from 'react-router'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [mailboxes, setMailboxes] = useState([]);
+
+  const addBox = (newMailboxData) => {
+    newMailboxData._id = mailboxes.length + 1;
+    setMailboxes([...mailboxes, newMailboxData])
+  };
 
   return (
     <>
-
+      <NavBar />
       <Routes>
         <Route
           path='/'
