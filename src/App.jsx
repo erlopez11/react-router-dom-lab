@@ -30,7 +30,7 @@ function App() {
 
         <Route 
           path='/new-mailbox'
-          element={<MailboxForm />}
+          element={<MailboxForm addBox={addBox}/>}
         />
 
         <Route 
