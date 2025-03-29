@@ -25,7 +25,7 @@ function App() {
 
         <Route 
           path='/mailboxes'
-          element={<MailboxList />}
+          element={<MailboxList mailboxes={mailboxes}/>}
         />
 
         <Route 
